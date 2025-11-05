@@ -32,21 +32,29 @@ export async function GET(request: NextRequest) {
     // Page dimensions
     const { width, height } = page.getSize()
     
-    // Draw QR code at top right
+    // Draw QR code at top right corner
     page.drawImage(qrCodeImage, {
-      x: width - 140,
-      y: height - 140,
-      width: 120,
-      height: 120,
+      x: width - 130,
+      y: height - 130,
+      width: 100,
+      height: 100,
     })
     
     // Add QR code label
-    page.drawText('Scan for Portfolio', {
-      x: width - 140,
-      y: height - 150,
-      size: 10,
+    page.drawText('Scan for Full Portfolio', {
+      x: width - 130,
+      y: height - 138,
+      size: 8,
       font: helveticaFont,
-      color: rgb(0.4, 0.4, 0.4),
+      color: rgb(0.3, 0.3, 0.3),
+    })
+    
+    page.drawText('LinkedIn | GitHub | Projects', {
+      x: width - 130,
+      y: height - 148,
+      size: 7,
+      font: helveticaFont,
+      color: rgb(0.5, 0.5, 0.5),
     })
     
     // Header
@@ -240,12 +248,20 @@ export async function GET(request: NextRequest) {
     })
     
     // Footer note
-    page.drawText('For complete portfolio and projects, scan the QR code above or visit: dawitgulta.vercel.app', {
+    page.drawText('Scan QR code for complete portfolio with LinkedIn, GitHub, publications, and interactive projects', {
       x: 50,
       y: 50,
-      size: 10,
+      size: 9,
       font: helveticaFont,
       color: rgb(0.5, 0.5, 0.5),
+    })
+    
+    page.drawText('Portfolio: dawitgulta.vercel.app', {
+      x: 50,
+      y: 35,
+      size: 9,
+      font: helveticaFont,
+      color: rgb(0.4, 0.4, 0.4),
     })
     
     // Generate PDF bytes
