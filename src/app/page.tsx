@@ -8,6 +8,7 @@ import Achievements from '@/components/Achievements'
 import Resume from '@/components/Resume'
 import Contact from '@/components/Contact'
 import Navigation from '@/components/Navigation'
+import BackToTop from '@/components/BackToTop'
 
 export default function Home() {
   return (
@@ -66,6 +67,9 @@ export default function Home() {
         <Resume />
         <Contact />
       </div>
+
+      {/* Back to Top Button */}
+      <BackToTop />
     </main>
   );
 }
