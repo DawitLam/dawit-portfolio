@@ -5,7 +5,6 @@ const Projects = () => {
       description: "Comprehensive Tableau dashboard analyzing demographics and hip pain patterns. Created as part of York University's data visualization team, showcasing advanced analytics and interactive visualizations for healthcare insights.",
       technologies: ["Tableau Public", "Data Analysis", "Healthcare Analytics", "Interactive Dashboards"],
       liveDemo: "https://public.tableau.com/app/profile/dawit.gulta/viz/YorkUniversityDataVisualizationteam/Overview-DemographicsandHipPain#1",
-      github: "Data Visualization Project",
       features: [
         "Interactive demographic analysis dashboard",
         "Hip pain pattern visualization and insights",
