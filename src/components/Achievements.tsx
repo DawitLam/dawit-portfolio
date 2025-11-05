@@ -2,7 +2,7 @@ const Achievements = () => {
   const achievements = [
     {
       type: "Education",
-      title: "Master of Science in Information Systems & Technology",
+      title: "Master of Arts in Information Systems & Technology",
       organization: "York University",
       date: "June 2025",
       description: "Graduated with focus on machine learning, data science, and medical imaging applications",
@@ -149,7 +149,7 @@ const Achievements = () => {
         {/* Stats Section */}
         <div className="mt-16 grid md:grid-cols-4 gap-6 text-center">
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">MSc</div>
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">MA</div>
             <p className="text-gray-600 dark:text-gray-300 text-sm">Graduate Degree Completed</p>
           </div>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">

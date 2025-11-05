@@ -41,7 +41,7 @@ const Contact = () => {
                 </div>
                 <div>
                   <h4 className="font-semibold text-gray-900 dark:text-white mb-1">Current Status</h4>
-                  <p className="text-gray-600 dark:text-gray-300">MSc Graduate - York University (June 2025)</p>
+                  <p className="text-gray-600 dark:text-gray-300">MA Graduate - York University (June 2025)</p>
                   <p className="text-gray-600 dark:text-gray-300">Available for New Opportunities</p>
                 </div>
               </div>

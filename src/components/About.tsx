@@ -19,7 +19,7 @@ const About = () => {
             </h3>
             <div className="space-y-4 text-gray-600 dark:text-gray-300">
               <p>
-                Recently completed my Master of Science in Information Systems and Technology 
+                Recently completed my Master of Arts in Information Systems and Technology 
                 at York University (June 2025) and worked as a Research Data Analyst at Sunnybrook Hospital 
                 (until July 2025), where I focused on medical imaging and spine fracture risk prediction 
                 using advanced machine learning techniques.

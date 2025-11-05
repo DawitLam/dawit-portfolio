@@ -26,7 +26,7 @@ const Hero = () => {
           </p>
           
           <p className="text-lg text-gray-500 dark:text-gray-400 mb-8 max-w-2xl mx-auto">
-            MSc IS&T Graduate (York University, 2025) | Former Research Data Analyst (Sunnybrook Hospital) | 
+            MA IS&T Graduate (York University, 2025) | Former Research Data Analyst (Sunnybrook Hospital) | 
             Specializing in Medical Imaging, Machine Learning & Data Visualization
           </p>
           

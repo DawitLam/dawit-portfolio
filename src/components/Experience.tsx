@@ -15,11 +15,11 @@ const Experience = () => {
       technologies: ["Python", "TensorFlow", "Medical Imaging", "DICOM", "Statistical Analysis"]
     },
     {
-      title: "Graduate Research Assistant & MSc Graduate",
-      company: "York University - MSc Information Systems & Technology",
+      title: "Graduate Research Assistant & MA Graduate",
+      company: "York University - MA Information Systems & Technology",
       location: "Toronto, Canada",
       period: "2022 - June 2025",
-      description: "Completed advanced research in machine learning optimization and statistical methods. Contributed to open-source projects and developed novel algorithms for data analysis. Graduated with MSc in Information Systems & Technology.",
+      description: "Completed advanced research in machine learning optimization and statistical methods. Contributed to open-source projects and developed novel algorithms for data analysis. Graduated with MA in Information Systems & Technology.",
       achievements: [
         "Improved Dual Annealing optimization algorithm in SciPy library",
         "Implemented Cohen's d effect size statistical method for SciPy",
