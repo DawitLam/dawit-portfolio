@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: [Coming Soon - Deploy to Vercel]
+Visit the live portfolio: **[https://dawit-portfolio.vercel.app](https://dawit-portfolio.vercel.app)** *(URL will be updated after Vercel deployment)*
 
 ## 👨‍💻 About
 
@@ -36,20 +36,27 @@ This portfolio website represents the professional work and expertise of Dawit L
 
 ### 📱 Sections & Content
 1. **Navigation**: Fixed header with smooth scroll navigation
-2. **Hero Section**: Professional introduction with social links
+2. **Hero Section**: Professional introduction with social links and CTA buttons
 3. **About**: Comprehensive background and research interests
-4. **Skills**: Organized technical competencies by category
-5. **Experience**: Timeline-based professional history
-6. **Projects**: Featured work with live demos and GitHub links
-7. **Contact**: Professional contact information and social links
+4. **Skills**: Organized technical competencies by category with experience metrics
+5. **Experience**: Timeline-based professional history with correct dates
+6. **Publications**: Real research papers with IEEE and BMJ links
+7. **Achievements**: Professional accomplishments and certifications
+8. **Projects**: Featured work with live demos and GitHub links
+9. **Resume & QR Code**: Downloadable resume with embedded QR code functionality
+10. **Contact**: Professional contact information, email links, and social profiles
 
 ### 🔧 Technical Features
-- TypeScript for type safety
-- Component-based architecture
-- Responsive grid systems
-- Professional color schemes
-- Accessibility best practices
-- Fast loading and optimized performance
+- **QR Code Generation**: Automatic QR code embedding in downloadable resume
+- **Email Integration**: Direct mailto links with pre-populated subject/body
+- **PDF Manipulation**: Dynamic resume generation with QR codes
+- **API Routes**: Custom Next.js API for resume processing
+- **TypeScript**: Full type safety across all components
+- **Component Architecture**: Modular, reusable React components
+- **Responsive Design**: Mobile-first approach with Tailwind CSS
+- **Colorful Tech Theme**: Vibrant gradients and animated backgrounds
+- **Real Data Integration**: Actual publication links and professional information
+- **SEO Optimized**: Proper metadata and semantic HTML structure
 
 ## 🚀 Getting Started
 
@@ -61,8 +68,8 @@ This portfolio website represents the professional work and expertise of Dawit L
 
 1. **Clone the repository**
    ```bash
-   git clone [repository-url]
-   cd dawit_dev
+   git clone https://github.com/DawitLam/dawit-portfolio.git
+   cd dawit-portfolio
    ```
 
 2. **Install dependencies**
@@ -111,23 +118,30 @@ Pre-configured tasks available in VS Code:
 ## 📁 Project Structure
 
 ```
-dawit_dev/
+dawit-portfolio/
 ├── src/
 │   ├── app/
+│   │   ├── api/
+│   │   │   └── resume-with-qr/
+│   │   │       └── route.ts        # QR code generation API
 │   │   ├── globals.css
 │   │   ├── layout.tsx
 │   │   └── page.tsx
 │   └── components/
-│       ├── About.tsx
-│       ├── Contact.tsx
-│       ├── Experience.tsx
-│       ├── Hero.tsx
-│       ├── Navigation.tsx
-│       ├── Projects.tsx
-│       └── Skills.tsx
+│       ├── About.tsx               # Professional background
+│       ├── Achievements.tsx        # Accomplishments
+│       ├── Contact.tsx            # Contact info with email links
+│       ├── Experience.tsx         # Work timeline
+│       ├── Hero.tsx              # Main landing section
+│       ├── Navigation.tsx        # Header navigation
+│       ├── Projects.tsx          # Featured projects
+│       ├── Publications.tsx      # Research papers
+│       ├── Resume.tsx           # QR code & downloadable resume
+│       └── Skills.tsx           # Technical competencies
 ├── public/
-├── .github/
-│   └── copilot-instructions.md
+│   ├── Dawit_Gulta_resume.pdf    # Original resume file
+│   └── [other assets]
+├── .env.local                    # Environment variables
 ├── package.json
 ├── tailwind.config.ts
 ├── tsconfig.json
@@ -196,13 +210,27 @@ Update personal details in:
 - **GitHub**: [DawitLam](https://github.com/DawitLam)
 - **ORCID**: [0009-0008-7853-0956](https://orcid.org/0009-0008-7853-0956)
 
-## 📊 Key Projects Featured
+## 📊 Key Features & Highlights
 
-1. **Spine Fracture Risk Assessment ML System** - Medical AI research
-2. **FRC Robotics Scouting Application** - Real-time data collection system
-3. **Umoja Robotics LMS** - Educational technology platform
-4. **SciPy Optimization Improvements** - Open source contributions
-5. **Statistical Analysis Tools** - Cohen's d implementation
+### 🔬 **Real Research Integration**
+- **IEEE Publications**: Direct links to published medical imaging research
+- **BMJ Case Reports**: Links to actual published case studies
+- **ORCID Profile**: Connected research identity verification
+
+### 💼 **Professional Tools**
+- **QR Code Resume**: Downloadable PDF with embedded portfolio QR code
+- **Email Integration**: Direct contact with pre-populated professional templates
+- **Timeline Accuracy**: Correct graduation (June 2025) and work dates (July 2025)
+
+### 🎨 **Design Excellence**
+- **Colorful Tech Theme**: Vibrant gradients with cyan, purple, emerald, orange
+- **Interactive Elements**: Animated backgrounds, hover effects, smooth transitions
+- **Mobile Optimized**: Perfect display across all device sizes
+
+### 🚀 **Technical Innovation**
+- **Dynamic PDF Generation**: Real-time QR code embedding in resume downloads
+- **API Integration**: Custom Next.js API routes for document processing
+- **Modern Stack**: Next.js 16, TypeScript, Tailwind CSS, PDF-lib, QR code generation
 
 ## 📄 License
 
