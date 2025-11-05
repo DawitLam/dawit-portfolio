@@ -2,7 +2,7 @@ import Link from 'next/link'
 
 const Resume = () => {
   // QR Code data - you can replace this with your actual resume URL
-  const resumeUrl = "https://dawit.vercel.app" // Replace with your actual deployed URL
+  const resumeUrl = "https://dawitgulta.vercel.app" // Replace with your actual deployed URL
   
   // Generate QR code URL using a free service
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(resumeUrl)}&bgcolor=ffffff&color=000000&format=png&margin=10`

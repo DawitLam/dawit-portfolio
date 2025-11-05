@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with Next.js, TypeScript, and Tailw
 
 ## 🚀 Live Demo
 
-Visit the live portfolio: **[https://dawit-portfolio-git-master-dawitlams-projects.vercel.app](https://dawit-portfolio-git-master-dawitlams-projects.vercel.app)**
+Visit the live portfolio: **[https://dawitgulta.vercel.app](https://dawitgulta.vercel.app)**
 
 ## 👨‍💻 About
 

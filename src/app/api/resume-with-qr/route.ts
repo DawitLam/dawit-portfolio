@@ -6,7 +6,7 @@ export async function GET(request: NextRequest) {
   try {
     // For now, just redirect to the original resume
     // We'll implement the QR code feature after deployment
-    const portfolioUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL || 'https://dawit-portfolio.vercel.app'
+    const portfolioUrl = process.env.NEXT_PUBLIC_SITE_URL || process.env.VERCEL_URL || 'https://dawitgulta.vercel.app'
     
     // Generate a simple response that redirects to original resume
     return NextResponse.redirect(new URL('/Dawit_Gulta_resume.pdf', request.url))
