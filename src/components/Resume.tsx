@@ -192,7 +192,7 @@ const Resume = () => {
 
             {/* Email Contact */}
             <div className="bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-900/30 dark:to-emerald-900/30 p-6 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-green-200 dark:border-green-700">
-              <div className="flex items-center gap-4">
+              <div className="flex items-start gap-4">
                 <div className="w-12 h-12 bg-gradient-to-br from-green-500 to-emerald-600 rounded-lg flex items-center justify-center text-white text-xl font-bold shadow-lg">
                   ✉️
                 </div>
@@ -203,15 +203,32 @@ const Resume = () => {
                   <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
                     Direct professional communication
                   </p>
-                  <a
-                    href="mailto:dawitgulta@gmail.com?subject=Portfolio Inquiry&body=Hi Dawit, I found your portfolio and would like to connect."
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm"
-                  >
-                    Send Email
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </a>
+                  <div className="bg-white dark:bg-gray-800 p-2 rounded-lg border mb-3">
+                    <p className="font-mono text-green-700 dark:text-green-300 font-semibold text-sm">dawitgulta@gmail.com</p>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <a
+                      href="mailto:dawitgulta@gmail.com?subject=Portfolio Inquiry&body=Hi Dawit, I found your portfolio and would like to connect."
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-3 py-1.5 rounded-lg font-medium transition-all duration-300 text-xs"
+                    >
+                      Open Email
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </a>
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText('dawitgulta@gmail.com');
+                        alert('Email copied!');
+                      }}
+                      className="inline-flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white px-3 py-1.5 rounded-lg font-medium transition-colors text-xs"
+                    >
+                      Copy
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
               </div>
             </div>

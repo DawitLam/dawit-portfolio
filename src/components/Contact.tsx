@@ -128,18 +128,36 @@ const Contact = () => {
                   <h4 className="font-semibold text-green-900 dark:text-green-200 mb-2">
                     Direct Email Contact
                   </h4>
-                  <p className="text-green-700 dark:text-green-300 text-sm">
+                  <p className="text-green-700 dark:text-green-300 text-sm mb-3">
                     For direct communication, send me an email with your inquiry or opportunities.
                   </p>
-                  <a
-                    href="mailto:dawitgulta@gmail.com?subject=Portfolio Inquiry&body=Hi Dawit, I found your portfolio and would like to connect."
-                    className="inline-flex items-center gap-2 mt-3 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
-                  >
-                    Send Email
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
-                  </a>
+                  <div className="bg-white dark:bg-gray-800 p-3 rounded-lg border mb-3">
+                    <p className="text-sm text-gray-600 dark:text-gray-400 mb-1">Email Address:</p>
+                    <p className="font-mono text-green-700 dark:text-green-300 font-semibold">dawitgulta@gmail.com</p>
+                  </div>
+                  <div className="flex gap-2 flex-wrap">
+                    <a
+                      href="mailto:dawitgulta@gmail.com?subject=Portfolio Inquiry&body=Hi Dawit, I found your portfolio and would like to connect."
+                      className="inline-flex items-center gap-2 bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg font-medium transition-colors text-sm"
+                    >
+                      Open Email App
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </a>
+                    <button
+                      onClick={() => {
+                        navigator.clipboard.writeText('dawitgulta@gmail.com');
+                        alert('Email address copied to clipboard!');
+                      }}
+                      className="inline-flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white px-4 py-2 rounded-lg font-medium transition-colors text-sm"
+                    >
+                      Copy Email
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                      </svg>
+                    </button>
+                  </div>
                 </div>
 
                 <div className="bg-blue-50 dark:bg-blue-900/30 p-4 rounded-lg">
