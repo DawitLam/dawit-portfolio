@@ -204,7 +204,7 @@ const Resume = () => {
                     Direct professional communication
                   </p>
                   <a
-                    href="mailto:dawitgulta@gmail.com?subject=Portfolio%20Inquiry&body=Hi%20Dawit,%0A%0AI%20found%20your%20portfolio%20and%20would%20like%20to%20connect."
+                    href="mailto:dawitgulta@gmail.com?subject=Portfolio Inquiry&body=Hi Dawit, I found your portfolio and would like to connect."
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm"
                   >
                     Send Email
