@@ -229,30 +229,18 @@ const Resume = () => {
                     Downloadable Resume
                   </h4>
                   <p className="text-gray-600 dark:text-gray-300 text-sm mb-3">
-                    PDF resume with QR code for easy sharing
+                    Professional PDF resume for download and sharing
                   </p>
-                  <div className="flex gap-2 flex-wrap">
-                    <a
-                      href="/api/resume-with-qr"
-                      download
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm"
-                    >
-                      📱 With QR Code
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                    </a>
-                    <a
-                      href="/Dawit_Gulta_resume.pdf"
-                      download
-                      className="inline-flex items-center gap-2 border-2 border-purple-500 text-purple-600 hover:bg-purple-500 hover:text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm"
-                    >
-                      📄 Original
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
-                      </svg>
-                    </a>
-                  </div>
+                  <a
+                    href="/Dawit_Gulta_resume.pdf"
+                    download
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm"
+                  >
+                    📄 Download Resume
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
+                    </svg>
+                  </a>
                 </div>
               </div>
             </div>
