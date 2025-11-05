@@ -232,7 +232,7 @@ const Resume = () => {
                     Professional PDF resume for download and sharing
                   </p>
                   <a
-                    href="/Dawit_Gulta_resume.pdf"
+                    href="/Gulta,Dawit_Resume.pdf"
                     download
                     className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm"
                   >
