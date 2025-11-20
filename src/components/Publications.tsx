@@ -66,10 +66,10 @@ const Publications = () => {
   ]
 
   return (
-    <section id="publications" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="publications" className="py-20 px-4 sm:px-6 lg:px-8 relative" aria-labelledby="publications-heading">
       {/* Section background with subtle pattern */}
-      <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-blue-50/80 dark:from-gray-800/80 dark:to-blue-900/80 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 opacity-5" style={{
+      <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-blue-50/80 dark:from-gray-800/80 dark:to-blue-900/80 backdrop-blur-sm" aria-hidden="true"></div>
+      <div className="absolute inset-0 opacity-5" aria-hidden="true" style={{
         backgroundImage: `
           radial-gradient(circle at 20% 50%, #3b82f6 2px, transparent 2px),
           radial-gradient(circle at 80% 50%, #8b5cf6 2px, transparent 2px)
@@ -79,7 +79,7 @@ const Publications = () => {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 id="publications-heading" className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Publications & Research
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -138,14 +138,15 @@ const Publications = () => {
                     href={pub.link}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors"
+                    className="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-6 py-2 rounded-lg font-medium transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    aria-label={`View publication: ${pub.title}`}
                   >
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                     View Publication
                   </a>
-                  <div className="text-sm text-gray-500 dark:text-gray-400">
+                  <div className="text-sm text-gray-500 dark:text-gray-400" aria-hidden="true">
                     Cited by researchers worldwide
                   </div>
                 </div>
@@ -200,21 +201,21 @@ const Publications = () => {
         </div>
 
         {/* Research Impact Stats */}
-        <div className="mt-16 grid md:grid-cols-4 gap-6 text-center">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">3+</div>
+        <div className="mt-16 grid md:grid-cols-4 gap-6 text-center" role="group" aria-label="Research impact statistics">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg" role="group" aria-label="Published papers count">
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2" aria-label="3 plus published papers">3+</div>
             <p className="text-gray-600 dark:text-gray-300 text-sm">Published Papers</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">2</div>
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg" role="group" aria-label="International conferences attended">
+            <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2" aria-label="2 international conferences">2</div>
             <p className="text-gray-600 dark:text-gray-300 text-sm">International Conferences</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-            <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">3+</div>
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg" role="group" aria-label="Research presentations given">
+            <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2" aria-label="3 plus research presentations">3+</div>
             <p className="text-gray-600 dark:text-gray-300 text-sm">Research Presentations</p>
           </div>
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg">
-            <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2">1</div>
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-xl shadow-lg" role="group" aria-label="Keynote speaking engagements">
+            <div className="text-3xl font-bold text-orange-600 dark:text-orange-400 mb-2" aria-label="1 keynote speaking engagement">1</div>
             <p className="text-gray-600 dark:text-gray-300 text-sm">Keynote Speaking</p>
           </div>
         </div>

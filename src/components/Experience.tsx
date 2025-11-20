@@ -45,10 +45,10 @@ const Experience = () => {
   ]
 
   return (
-    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800">
+    <section id="experience" className="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50 dark:bg-gray-800" aria-labelledby="experience-heading">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 id="experience-heading" className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Professional Experience
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -59,7 +59,7 @@ const Experience = () => {
 
         <div className="relative max-w-6xl mx-auto">
           {/* Timeline line */}
-          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-px h-full w-1 bg-gradient-to-b from-blue-400 to-purple-600 rounded-full"></div>
+          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-px h-full w-1 bg-gradient-to-b from-blue-400 to-purple-600 rounded-full" aria-hidden="true"></div>
 
           {experiences.map((exp, index) => (
             <div key={index} className={`relative flex items-stretch mb-16 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>

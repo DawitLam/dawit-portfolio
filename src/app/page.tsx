@@ -12,9 +12,9 @@ import BackToTop from '@/components/BackToTop'
 
 export default function Home() {
   return (
-    <main className="min-h-screen relative overflow-hidden">
+    <main id="main-content" className="min-h-screen relative overflow-hidden">
       {/* Colorful Tech-Focused Background */}
-      <div className="fixed inset-0 z-0">
+      <div className="fixed inset-0 z-0" aria-hidden="true">
         {/* Vibrant tech gradient base */}
         <div className="absolute inset-0 bg-gradient-to-br from-cyan-50 via-blue-50 to-purple-50 dark:from-gray-900 dark:via-cyan-900 dark:to-purple-900"></div>
         

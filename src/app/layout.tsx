@@ -20,9 +20,33 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
+      <head>
+        <style dangerouslySetInnerHTML={{
+          __html: `
+            .skip-to-content {
+              position: absolute;
+              left: -9999px;
+              z-index: 999;
+              padding: 1rem 1.5rem;
+              background-color: #2563eb;
+              color: white;
+              text-decoration: none;
+              border-radius: 0 0 0.5rem 0.5rem;
+            }
+            .skip-to-content:focus {
+              left: 50%;
+              transform: translateX(-50%);
+              top: 0;
+            }
+          `
+        }} />
+      </head>
       <body
         className="font-sans antialiased"
       >
+        <a href="#main-content" className="skip-to-content">
+          Skip to main content
+        </a>
         {children}
       </body>
     </html>

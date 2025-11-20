@@ -35,10 +35,10 @@ const Skills = () => {
   ]
 
   return (
-    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="skills" className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="skills-heading">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 id="skills-heading" className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Technical Skills
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -56,16 +56,16 @@ const Skills = () => {
               <h3 className="text-lg font-semibold text-gray-900 dark:text-white mb-4">
                 {category.title}
               </h3>
-              <div className="space-y-2">
+              <ul className="space-y-2" role="list">
                 {category.skills.map((skill, skillIndex) => (
-                  <div 
+                  <li 
                     key={skillIndex}
                     className="bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-sm font-medium"
                   >
                     {skill}
-                  </div>
+                  </li>
                 ))}
-              </div>
+              </ul>
             </div>
           ))}
         </div>
@@ -76,16 +76,16 @@ const Skills = () => {
               Specialized Expertise
             </h3>
             <div className="grid md:grid-cols-3 gap-6 text-center">
-              <div>
-                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">5+</div>
+              <div role="group" aria-label="Machine Learning and Data Science experience">
+                <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2" aria-label="5 plus years">5+</div>
                 <p className="text-gray-600 dark:text-gray-300">Years in ML & Data Science</p>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2">10+</div>
+              <div role="group" aria-label="Database and Information Systems experience">
+                <div className="text-3xl font-bold text-purple-600 dark:text-purple-400 mb-2" aria-label="10 plus years">10+</div>
                 <p className="text-gray-600 dark:text-gray-300">Years Database & Information Systems</p>
               </div>
-              <div>
-                <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2">3+</div>
+              <div role="group" aria-label="Research publications">
+                <div className="text-3xl font-bold text-green-600 dark:text-green-400 mb-2" aria-label="3 plus published papers">3+</div>
                 <p className="text-gray-600 dark:text-gray-300">Published Research Papers</p>
               </div>
             </div>

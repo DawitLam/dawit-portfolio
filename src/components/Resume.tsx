@@ -10,10 +10,10 @@ const Resume = () => {
   const qrCodeUrl = `https://api.qrserver.com/v1/create-qr-code/?size=200x200&data=${encodeURIComponent(resumeUrl)}&bgcolor=ffffff&color=000000&format=png&margin=10`
   
   return (
-    <section id="resume" className="py-20 px-4 sm:px-6 lg:px-8 relative">
+    <section id="resume" className="py-20 px-4 sm:px-6 lg:px-8 relative" aria-labelledby="resume-heading">
       {/* Colorful tech background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-purple-50/80 via-pink-50/80 to-orange-50/80 dark:from-purple-900/80 dark:via-pink-900/80 dark:to-orange-900/80 backdrop-blur-sm"></div>
-      <div className="absolute inset-0 opacity-10" style={{
+      <div className="absolute inset-0 bg-gradient-to-br from-purple-50/80 via-pink-50/80 to-orange-50/80 dark:from-purple-900/80 dark:via-pink-900/80 dark:to-orange-900/80 backdrop-blur-sm" aria-hidden="true"></div>
+      <div className="absolute inset-0 opacity-10" aria-hidden="true" style={{
         backgroundImage: `
           radial-gradient(circle at 30% 40%, #8b5cf6 2px, transparent 2px),
           radial-gradient(circle at 70% 60%, #ec4899 2px, transparent 2px),
@@ -24,7 +24,7 @@ const Resume = () => {
       
       <div className="max-w-7xl mx-auto relative z-10">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent mb-4">
+          <h2 id="resume-heading" className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-purple-600 via-pink-600 to-orange-600 bg-clip-text text-transparent mb-4">
             Digital Resume & Portfolio Access
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -51,7 +51,7 @@ const Resume = () => {
                 <div className="p-4 bg-white rounded-xl shadow-lg">
                   <img 
                     src={qrCodeUrl} 
-                    alt="QR Code to Portfolio" 
+                    alt="QR code linking to Dawit Gulta's portfolio website at dawitgulta.vercel.app" 
                     className="w-48 h-48 mx-auto"
                   />
                 </div>
@@ -97,10 +97,11 @@ const Resume = () => {
                   </p>
                   <Link
                     href="/"
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-cyan-500 to-blue-600 hover:from-cyan-600 hover:to-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm focus:outline-none focus:ring-2 focus:ring-cyan-500 focus:ring-offset-2"
+                    aria-label="View interactive portfolio homepage"
                   >
                     View Portfolio
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </Link>
@@ -125,10 +126,11 @@ const Resume = () => {
                     href="https://www.linkedin.com/in/dawit-lambebo-gulta/"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-blue-600 to-indigo-600 hover:from-blue-700 hover:to-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2"
+                    aria-label="Connect with Dawit on LinkedIn"
                   >
                     Connect on LinkedIn
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
@@ -153,10 +155,11 @@ const Resume = () => {
                     href="https://github.com/DawitLam"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-gray-700 to-slate-800 hover:from-gray-800 hover:to-slate-900 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-gray-700 to-slate-800 hover:from-gray-800 hover:to-slate-900 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                    aria-label="View Dawit's code repositories on GitHub"
                   >
                     View Code
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
@@ -181,10 +184,11 @@ const Resume = () => {
                     href="https://public.tableau.com/app/profile/dawit.gulta"
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm"
+                    className="inline-flex items-center gap-2 bg-gradient-to-r from-orange-500 to-red-600 hover:from-orange-600 hover:to-red-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm focus:outline-none focus:ring-2 focus:ring-orange-500 focus:ring-offset-2"
+                    aria-label="View Dawit's data visualizations on Tableau Public"
                   >
                     View Dashboards
-                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
                     </svg>
                   </a>
@@ -211,10 +215,11 @@ const Resume = () => {
                   <div className="flex gap-2 flex-wrap">
                     <a
                       href="mailto:dawitgulta@gmail.com?subject=Portfolio Inquiry&body=Hi Dawit, I found your portfolio and would like to connect."
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-3 py-1.5 rounded-lg font-medium transition-all duration-300 text-xs"
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-green-500 to-emerald-600 hover:from-green-600 hover:to-emerald-700 text-white px-3 py-1.5 rounded-lg font-medium transition-all duration-300 text-xs focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2"
+                      aria-label="Send email to dawitgulta@gmail.com"
                     >
                       Open Email
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
                       </svg>
                     </a>
@@ -223,10 +228,11 @@ const Resume = () => {
                         navigator.clipboard.writeText('dawitgulta@gmail.com');
                         alert('Email copied!');
                       }}
-                      className="inline-flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white px-3 py-1.5 rounded-lg font-medium transition-colors text-xs"
+                      className="inline-flex items-center gap-2 bg-gray-600 hover:bg-gray-700 text-white px-3 py-1.5 rounded-lg font-medium transition-colors text-xs focus:outline-none focus:ring-2 focus:ring-gray-500 focus:ring-offset-2"
+                      aria-label="Copy email address to clipboard"
                     >
                       Copy
-                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
                       </svg>
                     </button>
@@ -252,20 +258,22 @@ const Resume = () => {
                     <a
                       href="/Gulta,Dawit_Resume.pdf"
                       download
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm"
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-purple-500 to-indigo-600 hover:from-purple-600 hover:to-indigo-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm focus:outline-none focus:ring-2 focus:ring-purple-500 focus:ring-offset-2"
+                      aria-label="Download Dawit Gulta's resume as PDF"
                     >
                       📄 Download Resume
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 10v6m0 0l-3-3m3 3l3-3m2 8H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z" />
                       </svg>
                     </a>
                     <a
                       href="/api/resume-with-qr"
                       download
-                      className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm"
+                      className="inline-flex items-center gap-2 bg-gradient-to-r from-pink-500 to-rose-600 hover:from-pink-600 hover:to-rose-700 text-white px-4 py-2 rounded-lg font-medium transition-all duration-300 text-sm focus:outline-none focus:ring-2 focus:ring-pink-500 focus:ring-offset-2"
+                      aria-label="Download resume with embedded QR code as PDF"
                     >
                       📱 Resume with QR Code
-                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm12 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z" />
                       </svg>
                     </a>

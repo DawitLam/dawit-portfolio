@@ -55,10 +55,10 @@ const Achievements = () => {
   ]
 
   return (
-    <section id="achievements" className="py-20 px-4 sm:px-6 lg:px-8">
+    <section id="achievements" className="py-20 px-4 sm:px-6 lg:px-8" aria-labelledby="achievements-heading">
       <div className="max-w-7xl mx-auto">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
+          <h2 id="achievements-heading" className="text-3xl md:text-4xl font-bold text-gray-900 dark:text-white mb-4">
             Achievements & Recognition
           </h2>
           <p className="text-lg text-gray-600 dark:text-gray-300 max-w-3xl mx-auto">
@@ -73,18 +73,29 @@ const Achievements = () => {
             Professional Milestones
           </h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-            {achievements.map((achievement, index) => (
+            {achievements.map((achievement, index) => {
+              // Dynamic colors for each milestone type
+              const colors = {
+                Education: { gradient: 'from-cyan-500 to-blue-600', badge: 'bg-cyan-100 dark:bg-cyan-900/50 text-cyan-700 dark:text-cyan-300', border: 'border-cyan-500' },
+                Research: { gradient: 'from-purple-500 to-pink-600', badge: 'bg-purple-100 dark:bg-purple-900/50 text-purple-700 dark:text-purple-300', border: 'border-purple-500' },
+                'Open Source': { gradient: 'from-green-500 to-emerald-600', badge: 'bg-green-100 dark:bg-green-900/50 text-green-700 dark:text-green-300', border: 'border-green-500' },
+                Leadership: { gradient: 'from-orange-500 to-red-600', badge: 'bg-orange-100 dark:bg-orange-900/50 text-orange-700 dark:text-orange-300', border: 'border-orange-500' },
+                Publication: { gradient: 'from-indigo-500 to-violet-600', badge: 'bg-indigo-100 dark:bg-indigo-900/50 text-indigo-700 dark:text-indigo-300', border: 'border-indigo-500' }
+              };
+              const colorScheme = colors[achievement.type as keyof typeof colors] || colors.Education;
+              
+              return (
               <div 
                 key={index}
-                className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 border-gradient-to-b from-blue-500 to-purple-600"
+                className={`bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border-l-4 ${colorScheme.border}`}
               >
                 <div className="flex items-start gap-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-600 rounded-lg flex items-center justify-center text-white text-2xl font-bold shadow-lg">
+                  <div className={`w-16 h-16 bg-gradient-to-br ${colorScheme.gradient} rounded-lg flex items-center justify-center text-white text-2xl font-bold shadow-lg`}>
                     {achievement.type.charAt(0)}
                   </div>
                   <div className="flex-1">
                     <div className="flex items-center gap-2 mb-2">
-                      <span className="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 px-2 py-1 rounded-full text-xs font-medium">
+                      <span className={`${colorScheme.badge} px-2 py-1 rounded-full text-xs font-medium`}>
                         {achievement.type}
                       </span>
                       <span className="text-gray-500 dark:text-gray-400 text-sm">
@@ -103,7 +114,8 @@ const Achievements = () => {
                   </div>
                 </div>
               </div>
-            ))}
+              );
+            })}
           </div>
         </div>
 
@@ -147,9 +159,9 @@ const Achievements = () => {
         </div>
 
         {/* Stats Section */}
-        <div className="mt-16 grid md:grid-cols-4 gap-6 text-center">
-          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
-            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2">MA</div>
+        <div className="mt-16 grid md:grid-cols-4 gap-6 text-center" role="group" aria-label="Achievement statistics">
+          <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md" role="group" aria-label="Graduate degree completed">
+            <div className="text-3xl font-bold text-blue-600 dark:text-blue-400 mb-2" aria-label="Master of Arts degree">MA</div>
             <p className="text-gray-600 dark:text-gray-300 text-sm">Graduate Degree Completed</p>
           </div>
           <div className="bg-white dark:bg-gray-800 p-6 rounded-lg shadow-md">
