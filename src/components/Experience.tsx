@@ -1,3 +1,5 @@
+'use client'
+
 const Experience = () => {
   const experiences = [
     {
@@ -11,8 +13,21 @@ const Experience = () => {
         "Collaborated with radiologists and clinicians to validate model predictions",
         "Processed and analyzed large-scale medical datasets (DICOM format)",
         "Published research findings and presented at medical conferences"
-      ],
-      technologies: ["Python", "TensorFlow", "Medical Imaging", "DICOM", "Statistical Analysis"]
+      ]
+    },
+    {
+      title: "Teaching Assistant",
+      company: "York University - School of Information Technology (ITEC)",
+      location: "Toronto, Canada",
+      period: "2023 - 2025",
+      description: "Provided comprehensive academic and technical support for database management and system integration courses. Facilitated student learning through hands-on system administration and curriculum development.",
+      achievements: [
+        "Tutored and taught database management courses, helping students master SQL, relational database design, and query optimization",
+        "Provided system integration support including VPN configuration, Oracle database setup, and enterprise system administration",
+        "Marked assignments and exams, providing detailed feedback to improve student learning outcomes",
+        "Designed and created course plans and learning materials for information systems courses",
+        "Invigilated exams and maintained academic integrity protocols"
+      ]
     },
     {
       title: "Graduate Research Assistant & MA Graduate",
@@ -25,22 +40,21 @@ const Experience = () => {
         "Implemented Cohen's d effect size statistical method for SciPy",
         "Conducted comprehensive analysis of medical datasets using advanced statistical methods",
         "Maintained high academic standing while contributing to multiple research projects"
-      ],
-      technologies: ["Python", "SciPy", "Statistical Analysis", "Algorithm Development", "Research Methods"]
+      ]
     },
     {
-      title: "Technical Consultant & Mentor",
+      title: "System Developer & AI Consultant",
       company: "African-Canadian Christian Network (ACCN)",
       location: "Toronto, Canada",
       period: "2021 - Present",
-      description: "Providing technical leadership and mentorship for educational technology initiatives. Developed comprehensive learning management systems and robotics curriculum for Umoja Robotics program.",
+      description: "Providing technical leadership and AI consulting for educational technology and business process automation. Developed full-stack applications and intelligent systems for robotics education and enterprise automation.",
       achievements: [
-        "Built full-stack web application for FRC robotics scouting system",
-        "Developed comprehensive Learning Management System (LMS) for mechanical engineering curriculum",
-        "Designed and implemented AI curriculum integration strategies",
-        "Mentored students in programming, data science, and robotics technologies"
-      ],
-      technologies: ["React", "Next.js", "Web Development", "Educational Technology", "Curriculum Development"]
+        "Developed full-stack web application for FRC robotics scouting system using React and Next.js, enabling real-time match data collection and analysis",
+        "Created custom Learning Management System (LMS) with integrated AI curriculum implementation for mechanical engineering education",
+        "Automated business processes using Salesforce and Power Automate, improving workflow efficiency and data management",
+        "Designed and implemented AI curriculum integration strategies for robotics and technology programs",
+        "Mentored students in programming, data science, AI, and robotics technologies"
+      ]
     }
   ]
 
@@ -57,61 +71,46 @@ const Experience = () => {
           </p>
         </div>
 
-        <div className="relative max-w-6xl mx-auto">
+        <div className="relative max-w-4xl mx-auto">
           {/* Timeline line */}
-          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-px h-full w-1 bg-gradient-to-b from-blue-400 to-purple-600 rounded-full" aria-hidden="true"></div>
+          <div className="absolute left-8 md:left-1/2 transform md:-translate-x-px h-full w-1 bg-gradient-to-b from-blue-400 to-purple-600" aria-hidden="true"></div>
 
           {experiences.map((exp, index) => (
-            <div key={index} className={`relative flex items-stretch mb-16 ${index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'}`}>
+            <div key={index} className={`relative mb-12 md:mb-16 ${index % 2 === 0 ? 'md:ml-auto md:w-1/2 md:pr-12' : 'md:w-1/2 md:pl-12'}`}>
               {/* Timeline dot */}
-              <div className="absolute left-6 md:left-1/2 transform md:-translate-x-1/2 w-6 h-6 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full border-4 border-white dark:border-gray-800 z-10 shadow-lg"></div>
-              
-              {/* Content */}
-              <div className={`ml-20 md:ml-0 md:w-5/12 ${index % 2 === 0 ? '' : 'md:mr-auto md:text-right'}`}>
-                <div className="bg-gradient-to-br from-white to-gray-50 dark:from-gray-800 dark:to-gray-900 p-8 rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-100 dark:border-gray-700 min-h-[400px] flex flex-col justify-between">
-                  <div className="mb-4">
-                    <h3 className="text-xl font-bold text-gray-900 dark:text-white mb-2">
-                      {exp.title}
-                    </h3>
-                    <p className="text-blue-600 dark:text-blue-400 font-semibold mb-1">
-                      {exp.company}
-                    </p>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm mb-1">
-                      {exp.location}
-                    </p>
-                    <p className="text-gray-500 dark:text-gray-400 text-sm font-medium">
-                      {exp.period}
-                    </p>
-                  </div>
-                  
-                  <p className="text-gray-600 dark:text-gray-300 mb-4">
-                    {exp.description}
-                  </p>
-                  
-                  <div className="mb-4">
-                    <h4 className="font-semibold text-gray-900 dark:text-white mb-2">
-                      Key Achievements:
-                    </h4>
-                    <ul className="space-y-1">
-                      {exp.achievements.map((achievement, achIndex) => (
-                        <li key={achIndex} className="text-gray-600 dark:text-gray-300 text-sm flex items-start">
-                          <span className="text-blue-500 mr-2 mt-1.5 w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></span>
-                          {achievement}
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                  
-                  <div className="flex flex-wrap gap-2">
-                    {exp.technologies.map((tech, techIndex) => (
-                      <span 
-                        key={techIndex}
-                        className="bg-blue-100 dark:bg-blue-900/50 text-blue-700 dark:text-blue-300 px-3 py-1 rounded-full text-xs font-medium"
-                      >
-                        {tech}
-                      </span>
+              <div className="absolute left-4 md:left-0 transform md:translate-x-1/2 -translate-x-1/2 w-5 h-5 bg-gradient-to-br from-blue-500 to-purple-600 rounded-full border-4 border-white dark:border-gray-800 z-10"></div>
+
+              {/* Content Card */}
+              <div className="ml-16 md:ml-0 bg-white dark:bg-gray-900 p-6 rounded-lg shadow-md hover:shadow-lg transition-shadow border border-gray-200 dark:border-gray-700">
+                <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
+                  {exp.title}
+                </h3>
+                <p className="text-blue-600 dark:text-blue-400 font-semibold text-sm mb-1">
+                  {exp.company}
+                </p>
+                <p className="text-gray-500 dark:text-gray-400 text-xs mb-1">
+                  {exp.location}
+                </p>
+                <p className="text-gray-500 dark:text-gray-400 text-xs font-medium mb-3">
+                  {exp.period}
+                </p>
+                
+                <p className="text-gray-700 dark:text-gray-300 text-sm mb-3">
+                  {exp.description}
+                </p>
+                
+                <div>
+                  <h4 className="font-semibold text-gray-900 dark:text-white text-sm mb-2">
+                    Key Achievements:
+                  </h4>
+                  <ul className="space-y-1">
+                    {exp.achievements.map((achievement, achIndex) => (
+                      <li key={achIndex} className="text-gray-600 dark:text-gray-300 text-xs flex items-start">
+                        <span className="text-blue-500 mr-2 mt-1.5 w-1.5 h-1.5 bg-blue-500 rounded-full flex-shrink-0"></span>
+                        {achievement}
+                      </li>
                     ))}
-                  </div>
+                  </ul>
                 </div>
               </div>
             </div>
